@@ -5,6 +5,8 @@ const checkout = document.getElementById('checkout')
 const total = document.querySelector('[data-testid="order-total"]')
 let products = []
 let last = { count: 0, total: 0 }
+// Each page has its own cart.
+const cartId = Math.random().toString(36).slice(2)
 
 function render(filter) {
   list.innerHTML = ''
@@ -19,7 +21,7 @@ function render(filter) {
 }
 
 async function add(productId) {
-  const response = await fetch('/api/cart', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ cartId: 'page', productId }) })
+  const response = await fetch('/api/cart', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ cartId, productId }) })
   last = await response.json()
   count.textContent = String(last.count)
   checkout.disabled = last.count === 0
