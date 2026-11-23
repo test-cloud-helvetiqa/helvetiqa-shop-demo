@@ -1,0 +1,8 @@
+{
+  "name": "helvetiqa-shop-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo Shop: the application under test of HelvetiQA's Change Radar scenario",
+  "scripts": { "start": "node server.js" },
+  "license": "MIT"
+}

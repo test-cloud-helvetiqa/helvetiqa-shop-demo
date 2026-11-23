@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Shop</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Demo Shop</h1>
+    <p class="cart">Cart: <span data-testid="cart-count">0</span> items</p>
+  </header>
+  <main>
+    <input type="search" placeholder="Search products" aria-label="Search products" id="search">
+    <ul id="products" aria-label="Products"></ul>
+    <section aria-label="Order">
+      <button type="button" id="checkout" disabled>Checkout</button>
+      <p data-testid="order-total" hidden></p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
